@@ -1,3 +1,2 @@
 spotipy
 pyinstaller
-PySide6
