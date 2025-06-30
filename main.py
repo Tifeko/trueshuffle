@@ -39,7 +39,7 @@ with open('config.txt', "r") as file:
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
     client_id=client_id,
     client_secret=client_secret,
-    redirect_uri="http://localhost:1234",
+    redirect_uri="http://127.0.0.1:1234",
     scope="user-modify-playback-state user-read-playback-state playlist-read-private"
 ))
 
