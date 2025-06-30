@@ -19,5 +19,5 @@ jobs:
     - uses: actions/upload-artifact@v4
       with:
         name: Main Executeble
-        path: dist/main/main.exe
+        path: dist/main.exe
     
