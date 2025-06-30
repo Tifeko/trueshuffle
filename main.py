@@ -4,7 +4,6 @@ import random
 import time
 import os
 import sys
-import PySide6
 
 def config_wizard():
     with open("config.txt", "w") as file:
