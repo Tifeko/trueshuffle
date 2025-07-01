@@ -19,7 +19,7 @@ def config_wizard():
 if os.path.exists("config.txt"):
     print("config exists")
 else:
-    answer = messagebox.askquestion("config does not exists, do you want to create one using the wizard? ")
+    answer = messagebox.askquestion("trueshuffle","config does not exists, do you want to create one using the wizard? ")
     if answer == "yes" or answer == "y":
         print("starting wizard")
         config_wizard()
