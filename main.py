@@ -8,12 +8,23 @@ from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
 
-
+root = Tk()
+root.geometry("300x150")
+root.title("trueshuffle")
 
 def config_wizard():
-    with open("config.txt", "w") as file:
-        file.write("CLIENT_ID=" + input("what is your client id? ") + "\n")
-        file.write("CLIENT_SECRET=" + input("what is your client secret? "))
+    def get_entry():
+        global client_id
+        client_id=entry.get()
+        with open("config.txt", "w") as file:
+            file.write("CLIENT_ID=" + client_id + "\n")
+            file.write("CLIENT_SECRET=" + input("what is your client secret? "))
+    label = Label(root, text="What is your client id:")
+    label.pack(pady=10)
+    entry = Entry(root, width=30)
+    entry.pack(pady=5)
+    button = Button(root, text="Submit", command=get_entry)
+    button.pack(pady=10)
 
 # Check if config.txt exists
 if os.path.exists("config.txt"):
@@ -152,3 +163,4 @@ def choose(device_id):
         choose(device_id)
 
 choose(device_id)
+root.mainloop()
