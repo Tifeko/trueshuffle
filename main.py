@@ -4,6 +4,11 @@ import random
 import time
 import os
 import sys
+from tkinter import *
+from tkinter import ttk
+from tkinter import messagebox
+
+
 
 def config_wizard():
     with open("config.txt", "w") as file:
@@ -14,7 +19,7 @@ def config_wizard():
 if os.path.exists("config.txt"):
     print("config exists")
 else:
-    answer = input("config does not exists, do you want to create one using the wizard? ")
+    answer = messagebox.askquestion("config does not exists, do you want to create one using the wizard? ")
     if answer == "yes" or answer == "y":
         print("starting wizard")
         config_wizard()
